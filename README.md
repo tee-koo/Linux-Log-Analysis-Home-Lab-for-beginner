@@ -99,9 +99,9 @@ journalctl -u ssh
 Expected Output:
 
 ```sql
--- Logs begin at Fri 2024-07-12 10:22:08 UTC, end at Sat 2024-07-20 10:25:03 UTC. --
-Jul 20 10:00:00 hostname sshd[12345]: Accepted password for user from 192.168.1.2 port 22 ssh2
-Jul 20 10:00:01 hostname sshd[12345]: pam_unix(sshd:session): session opened for user user by (uid=0)
+Feb 20 08:49:09 nas3 sshd[2589419]: Accepted password for root from 192.xxx.xxx.xxx port 50256 ssh2
+Feb 20 08:49:09 nas3 sshd[2589419]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)
+Feb 20 08:49:09 nas3 sshd[2589419]: pam_env(sshd:session): deprecated reading of user environment enabled
 ...
 ```
 4. Search for Specific Keywords: Search logs for entries containing the keyword "error."
