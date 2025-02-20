@@ -70,9 +70,9 @@ journalctl -n 100
 Expected Output:
 
 ```lua
--- Logs begin at Fri 2024-07-12 10:22:08 UTC, end at Sat 2024-07-20 10:25:03 UTC. --
-Jul 20 10:24:53 hostname systemd[1]: Starting Daily apt upgrade and clean activities...
-Jul 20 10:24:54 hostname kernel: [107945.787543] audit: type=1400 audit(1595271894.123:225): apparmor="STATUS" operation="profile_load" profile="unconfined"
+Feb 20 07:37:55 nas3 openmediavault-check_btrfs_errors[2585015]: Performing an error check on Btrfs file systems.
+Feb 20 07:37:55 nas3 openmediavault-check_locked_users[2585021]: Checking for locked/banned users.
+Feb 20 07:37:55 nas3 openmediavault-check_locked_users[2585027]: No locked/banned users found.
 ...
 ```
 2. Filter by Time: Filter logs to view entries from the last hour.
