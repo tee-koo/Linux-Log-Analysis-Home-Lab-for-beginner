@@ -83,9 +83,12 @@ journalctl --since "1 hour ago"
 Expected Output:
 
 ```lua
--- Logs begin at Fri 2024-07-12 10:22:08 UTC, end at Sat 2024-07-20 10:25:03 UTC. --
-Jul 20 09:24:53 hostname systemd[1]: Starting Daily apt upgrade and clean activities...
-Jul 20 09:24:54 hostname kernel: [107945.787543] audit: type=1400 audit(1595271894.123:225): apparmor="STATUS" operation="profile_load" profile="unconfined"
+Feb 20 08:00:01 nas3 CRON[2586348]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Feb 20 08:00:01 nas3 CRON[2586349]: (root) CMD (/usr/sbin/omv-mkrrdgraph >/dev/null 2>&1)
+Feb 20 08:00:05 nas3 CRON[2586348]: pam_unix(cron:session): session closed for user root
+Feb 20 08:09:01 nas3 CRON[2587073]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Feb 20 08:09:01 nas3 CRON[2587074]: (root) CMD (  [ -x /usr/lib/php/sessionclean ] && if [ ! -d /run/systemd/system ]; then /usr/lib/php/sessionclean; fi)
+Feb 20 08:09:01 nas3 CRON[2587073]: pam_unix(cron:session): session closed for user root
 ...
 ```
 3. Filter by Service: Display logs for the sshd service.
